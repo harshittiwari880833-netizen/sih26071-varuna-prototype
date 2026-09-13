@@ -123,15 +123,21 @@ function loadBundle(bundle, sourceKind) {
   STATE.selectedLocalityCellId = null;
   document.getElementById("locality-callout").hidden = true;
 
+<<<<<<< HEAD
   const spacingKm = (bundle.meta.grid_spacing_deg * 111).toFixed(1); // ~111km per degree latitude
   document.getElementById("grid-caption").textContent =
     `Each cell ≈ ${spacingKm} km × ${spacingKm} km · North is up · ${bundle.meta.city_name} metro area`;
 
+=======
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
   buildGrid();
   renderMetrics();
   renderLegend();
   renderFrame(0);
+<<<<<<< HEAD
   renderLocalityMarkers();
+=======
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
 }
 
 // --------------------------------------------------------------------------
@@ -341,6 +347,7 @@ function wireCityAndLocality() {
   });
 
   localitySel.addEventListener("change", (e) => {
+<<<<<<< HEAD
     if (e.target.value) {
       selectLocality(e.target.value);
     } else {
@@ -348,6 +355,10 @@ function wireCityAndLocality() {
       updateMarkerSelection();
       renderFrame(STATE.currentFrame);
     }
+=======
+    STATE.selectedLocalityCellId = e.target.value || null;
+    renderFrame(STATE.currentFrame); // re-render to show highlight + callout for the new selection
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
   });
 }
 
@@ -377,6 +388,7 @@ function buildGrid() {
   gridEl.innerHTML = "";
   STATE.cellEls = {};
 
+<<<<<<< HEAD
   // NOTE ON ORIENTATION: in our data, row index increases with latitude
   // (row 0 = southernmost, row size-1 = northernmost) — see
   // 05_generate_multi_city.py's lat_vals calculation. CSS Grid fills
@@ -384,6 +396,9 @@ function buildGrid() {
   // index first for North to end up at the TOP of the screen, matching
   // every map anyone has ever read.
   for (let r = size - 1; r >= 0; r--) {
+=======
+  for (let r = 0; r < size; r++) {
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
     for (let c = 0; c < size; c++) {
       const id = `${r}_${c}`;
       const el = document.createElement("div");
@@ -397,6 +412,7 @@ function buildGrid() {
   }
 }
 
+<<<<<<< HEAD
 // --------------------------------------------------------------------------
 // LOCALITY MARKERS — always-visible labeled pins on the grid so it reads as
 // an actual map of named places, not an abstract heatmap.
@@ -447,6 +463,8 @@ function selectLocality(cellId) {
   renderFrame(STATE.currentFrame);
 }
 
+=======
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
 function showTooltip(evt, cellId) {
   const tooltip = document.getElementById("map-tooltip");
   const frame = STATE.bundle.frames[STATE.currentFrame];

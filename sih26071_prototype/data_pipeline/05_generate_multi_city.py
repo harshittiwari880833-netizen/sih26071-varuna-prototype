@@ -63,11 +63,19 @@ CITIES = [
         "storm_start": (2, 2), "storm_dir": (1.4, 1.1),
         "basin_center_frac": (0.55, 0.45),
         "localities": [
+<<<<<<< HEAD
             {"name": "Anna Nagar",  "row": 16, "col": 7},
             {"name": "T. Nagar",    "row": 11, "col": 8},
             {"name": "Mylapore",    "row": 8,  "col": 14},
             {"name": "Adyar",       "row": 6,  "col": 15},
             {"name": "Velachery",   "row": 3,  "col": 10},
+=======
+            {"name": "Velachery",   "row": 15, "col": 13},
+            {"name": "T. Nagar",    "row": 9,  "col": 8},
+            {"name": "Adyar",       "row": 12, "col": 11},
+            {"name": "Mylapore",    "row": 10, "col": 10},
+            {"name": "Anna Nagar",  "row": 5,  "col": 4},
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
         ],
     },
     {
@@ -78,11 +86,19 @@ CITIES = [
         "storm_start": (17, 3), "storm_dir": (-1.2, 1.3),
         "basin_center_frac": (0.5, 0.55),
         "localities": [
+<<<<<<< HEAD
             {"name": "Andheri Subway",   "row": 16, "col": 4},
             {"name": "Sion",             "row": 10, "col": 12},
             {"name": "Hindmata (Dadar)", "row": 9,  "col": 9},
             {"name": "King's Circle",    "row": 8,  "col": 10},
             {"name": "Kurla",            "row": 8,  "col": 14},
+=======
+            {"name": "Hindmata (Dadar)", "row": 8,  "col": 10},
+            {"name": "Sion",             "row": 9,  "col": 12},
+            {"name": "Kurla",            "row": 11, "col": 13},
+            {"name": "Andheri Subway",   "row": 5,  "col": 6},
+            {"name": "King's Circle",    "row": 8,  "col": 9},
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
         ],
     },
     {
@@ -93,11 +109,19 @@ CITIES = [
         "storm_start": (4, 16), "storm_dir": (1.1, -1.3),
         "basin_center_frac": (0.6, 0.4),
         "localities": [
+<<<<<<< HEAD
             {"name": "Yemalur",           "row": 9,  "col": 16},
             {"name": "Koramangala",       "row": 6,  "col": 12},
             {"name": "Silk Board Jn.",    "row": 5,  "col": 11},
             {"name": "HSR Layout",        "row": 4,  "col": 13},
             {"name": "Bellandur",         "row": 3,  "col": 15},
+=======
+            {"name": "Bellandur",         "row": 14, "col": 15},
+            {"name": "Koramangala",       "row": 11, "col": 13},
+            {"name": "Silk Board Jn.",    "row": 13, "col": 12},
+            {"name": "HSR Layout",        "row": 15, "col": 14},
+            {"name": "Yemalur",           "row": 10, "col": 16},
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
         ],
     },
 ]

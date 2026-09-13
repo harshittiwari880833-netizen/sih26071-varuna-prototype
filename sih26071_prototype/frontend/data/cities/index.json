@@ -7,6 +7,7 @@
       "center_lon": 80.2707,
       "localities": [
         {
+<<<<<<< HEAD
           "name": "Anna Nagar",
           "row": 16,
           "col": 7,
@@ -45,6 +46,46 @@
           "cell_id": "3_10",
           "lat": 12.9427,
           "lon": 80.2707
+=======
+          "name": "Velachery",
+          "row": 15,
+          "col": 13,
+          "cell_id": "15_13",
+          "lat": 13.1827,
+          "lon": 80.3307
+        },
+        {
+          "name": "T. Nagar",
+          "row": 9,
+          "col": 8,
+          "cell_id": "9_8",
+          "lat": 13.0627,
+          "lon": 80.2307
+        },
+        {
+          "name": "Adyar",
+          "row": 12,
+          "col": 11,
+          "cell_id": "12_11",
+          "lat": 13.1227,
+          "lon": 80.2907
+        },
+        {
+          "name": "Mylapore",
+          "row": 10,
+          "col": 10,
+          "cell_id": "10_10",
+          "lat": 13.0827,
+          "lon": 80.2707
+        },
+        {
+          "name": "Anna Nagar",
+          "row": 5,
+          "col": 4,
+          "cell_id": "5_4",
+          "lat": 12.9827,
+          "lon": 80.1507
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
         }
       ]
     },
@@ -55,6 +96,7 @@
       "center_lon": 72.8777,
       "localities": [
         {
+<<<<<<< HEAD
           "name": "Andheri Subway",
           "row": 16,
           "col": 4,
@@ -80,6 +122,9 @@
         },
         {
           "name": "King's Circle",
+=======
+          "name": "Hindmata (Dadar)",
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
           "row": 8,
           "col": 10,
           "cell_id": "8_10",
@@ -87,12 +132,45 @@
           "lon": 72.8777
         },
         {
+<<<<<<< HEAD
           "name": "Kurla",
           "row": 8,
           "col": 14,
           "cell_id": "8_14",
           "lat": 19.036,
           "lon": 72.9577
+=======
+          "name": "Sion",
+          "row": 9,
+          "col": 12,
+          "cell_id": "9_12",
+          "lat": 19.056,
+          "lon": 72.9177
+        },
+        {
+          "name": "Kurla",
+          "row": 11,
+          "col": 13,
+          "cell_id": "11_13",
+          "lat": 19.096,
+          "lon": 72.9377
+        },
+        {
+          "name": "Andheri Subway",
+          "row": 5,
+          "col": 6,
+          "cell_id": "5_6",
+          "lat": 18.976,
+          "lon": 72.7977
+        },
+        {
+          "name": "King's Circle",
+          "row": 8,
+          "col": 9,
+          "cell_id": "8_9",
+          "lat": 19.036,
+          "lon": 72.8577
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
         }
       ]
     },
@@ -103,6 +181,7 @@
       "center_lon": 77.5946,
       "localities": [
         {
+<<<<<<< HEAD
           "name": "Yemalur",
           "row": 9,
           "col": 16,
@@ -141,6 +220,46 @@
           "cell_id": "3_15",
           "lat": 12.8316,
           "lon": 77.6946
+=======
+          "name": "Bellandur",
+          "row": 14,
+          "col": 15,
+          "cell_id": "14_15",
+          "lat": 13.0516,
+          "lon": 77.6946
+        },
+        {
+          "name": "Koramangala",
+          "row": 11,
+          "col": 13,
+          "cell_id": "11_13",
+          "lat": 12.9916,
+          "lon": 77.6546
+        },
+        {
+          "name": "Silk Board Jn.",
+          "row": 13,
+          "col": 12,
+          "cell_id": "13_12",
+          "lat": 13.0316,
+          "lon": 77.6346
+        },
+        {
+          "name": "HSR Layout",
+          "row": 15,
+          "col": 14,
+          "cell_id": "15_14",
+          "lat": 13.0716,
+          "lon": 77.6746
+        },
+        {
+          "name": "Yemalur",
+          "row": 10,
+          "col": 16,
+          "cell_id": "10_16",
+          "lat": 12.9716,
+          "lon": 77.7146
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
         }
       ]
     }

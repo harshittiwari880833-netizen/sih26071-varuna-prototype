@@ -64,6 +64,7 @@ sih26071_prototype/
 
 ---
 
+<<<<<<< HEAD
 ## How to explain the grid to judges (say this out loud)
 
 The grid used to be a bare heatmap with no landmarks — now it reads like an
@@ -98,6 +99,9 @@ colour → click a locality → play) is a complete, confident walkthrough
 even for someone seeing this dashboard for the very first time.
 
 ## City & locality selection (answers "show us a real place")
+=======
+## City &amp; locality selection (answers "show us a real place")
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
 
 The dashboard ships with **three real Indian cities** — Chennai, Mumbai,
 Bengaluru — each with its own genuinely distinct simulated storm (different
@@ -106,6 +110,7 @@ its own metrics, and its own DEM/drainage layout. Switch cities from the
 **Region &amp; locality** panel at the top of the sidebar.
 
 Each city also ships with **5 real, well-known localities with documented
+<<<<<<< HEAD
 monsoon/urban-flooding history** (e.g. Anna Nagar and Velachery in
 Chennai; Andheri and Kurla in Mumbai; Bellandur and Silk Board Junction
 in Bengaluru), shown as **always-visible labelled pins directly on the
@@ -115,6 +120,14 @@ confidence for the current frame. The grid also has a compass badge and a
 "North is up" caption so it reads as an actual map, not an abstract
 heatmap — this is your answer when a judge says "show me a specific
 place, not just a grid."
+=======
+monsoon/urban-flooding history** (e.g. Velachery and T. Nagar in Chennai;
+Hindmata/Dadar and Kurla in Mumbai; Bellandur and Silk Board Junction in
+Bengaluru). Picking one from "Jump to locality" highlights that spot on
+the grid and shows a live callout with its rainfall, flood depth,
+severity, and confidence for the current frame — this is your answer when
+a judge says "show me a specific place, not just a grid."
+>>>>>>> f1dad71823a25971bdddb8324ef24ab522a630f1
 
 **Be upfront about this, proactively:** the (row, col) grid cell assigned
 to each named locality is an illustrative alignment for the demo, not a
