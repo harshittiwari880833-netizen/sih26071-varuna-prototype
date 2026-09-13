@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VARUNA · Heavy Rainfall Early Warning &amp; Inundation Prediction</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        <span class="brand-name">VARUNA</span>
+        <span class="brand-sub">Heavy Rainfall Early Warning &amp; Inundation Prediction System</span>
+      </div>
+    </div>
+    <div class="topbar__meta">
+      <div class="meta-item">
+        <span class="meta-label">Region</span>
+        <span class="meta-value" id="meta-city">—</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Sources fused</span>
+        <span class="meta-value">Satellite · Radar · AWS · NWP</span>
+      </div>
+      <div class="meta-item status-live">
+        <span class="status-dot"></span>
+        <span class="meta-value">Replaying historical event</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MAIN GRID ============ -->
+  <main class="layout">
+
+    <!-- LEFT: controls + model metrics -->
+    <aside class="panel panel--left">
+
+      <section class="panel-block">
+        <h2 class="panel-title">Region &amp; locality</h2>
+        <label class="field-label" for="city-select">City</label>
+        <select id="city-select" class="select-input"><!-- injected --></select>
+
+        <label class="field-label" for="locality-select">Jump to locality</label>
+        <select id="locality-select" class="select-input">
+          <option value="">— Select a place —</option>
+        </select>
+
+        <div class="locality-callout" id="locality-callout" hidden>
+          <div class="locality-callout__name" id="loc-name">—</div>
+          <div class="locality-callout__grid" id="loc-stats"><!-- injected --></div>
+        </div>
+        <p class="panel-note panel-note--small">
+          Named localities are pinned to their nearest analysis grid cell for
+          this demo (illustrative alignment, not survey-grade geocoding).
+          Production version snaps real lat/lon via a geocoding service to
+          the same grid.
+        </p>
+      </section>
+
+      <section class="panel-block">
+        <h2 class="panel-title">Data source</h2>
+        <div class="data-source-status" id="data-source-status">
+          <span class="ds-dot ds-dot--demo" id="ds-dot"></span>
+          <span id="ds-status-text">Demo dataset · Chennai synthetic event</span>
+        </div>
+
+        <label class="upload-drop" id="upload-drop" for="file-upload">
+          <span class="upload-drop__icon">&#8593;</span>
+          <span class="upload-drop__text">Upload your dataset<br><small>.json (fused bundle) or .csv (raw grid data)</small></span>
+        </label>
+        <input type="file" id="file-upload" accept=".json,.csv" hidden />
+
+        <div class="upload-links">
+          <a href="data/sample_data_format.json" download class="upload-link">Sample .json format</a>
+          <span class="upload-link-sep">·</span>
+          <a href="data/sample_raw_data.csv" download class="upload-link">Sample .csv format</a>
+        </div>
+
+        <div class="upload-error" id="upload-error" hidden></div>
+
+        <button class="reset-btn" id="reset-demo-btn">Reset to demo dataset</button>
+
+        <p class="panel-note">
+          Uploading a .csv routes it through the same fusion → severity
+          classification → alert logic as the pipeline (recomputed live in
+          the browser). Uploading a .json (the output of
+          <code>04_export_demo_bundle.py</code>) loads it directly, including
+          real trained-model metrics.
+        </p>
+      </section>
+
+      <section class="panel-block">
+        <h2 class="panel-title">Map layer</h2>
+        <div class="layer-toggle" role="tablist">
+          <button class="layer-btn is-active" data-layer="rain" role="tab">Rainfall intensity</button>
+          <button class="layer-btn" data-layer="flood" role="tab">Inundation risk</button>
+        </div>
+      </section>
+
+      <section class="panel-block">
+        <h2 class="panel-title">Model performance</h2>
+        <div class="metric-grid" id="metric-grid"><!-- injected --></div>
+        <p class="panel-note" id="metric-note">Meteorology-standard skill scores, evaluated on held-out grid cells during training.</p>
+      </section>
+
+      <section class="panel-block">
+        <h2 class="panel-title">Top predictive signal</h2>
+        <div id="feature-importance"><!-- injected --></div>
+      </section>
+
+      <section class="panel-block panel-block--fill">
+        <h2 class="panel-title">How this prototype runs</h2>
+        <p class="panel-note">
+          Live IMD radar/INSAT/NWP access requires ministry-level data-sharing
+          agreements unavailable to a student team. This build replays a
+          synthetic-but-physically-modelled heavy rainfall event through the
+          real fusion + ML + inundation pipeline, entirely offline — so the
+          demo cannot fail on venue network or API limits. The same pipeline
+          is built to accept live feeds as a drop-in replacement.
+        </p>
+      </section>
+
+    </aside>
+
+    <!-- CENTER: the map -->
+    <section class="panel panel--center">
+      <div class="map-header">
+        <h2 class="panel-title">Grid Analysis View</h2>
+        <div class="legend" id="legend"><!-- injected --></div>
+      </div>
+
+      <div class="map-stage">
+        <div class="map-grid" id="map-grid" style="--grid-size: 20;"><!-- injected cells --></div>
+        <div class="map-tooltip" id="map-tooltip" hidden></div>
+      </div>
+
+      <div class="timeline">
+        <button class="play-btn" id="play-btn" aria-label="Play event replay">
+          <svg id="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="2,1 13,7 2,13" fill="currentColor"/></svg>
+          <svg id="icon-pause" width="14" height="14" viewBox="0 0 14 14" hidden><rect x="2" y="1" width="4" height="12" fill="currentColor"/><rect x="8" y="1" width="4" height="12" fill="currentColor"/></svg>
+        </button>
+        <div class="timeline__track-wrap">
+          <input type="range" id="time-slider" class="time-slider" min="0" max="11" value="0" step="1" />
+          <div class="timeline__labels">
+            <span id="time-readout">T+0 min</span>
+            <span id="time-frame-readout">Frame 1 / 12</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: alerts -->
+    <aside class="panel panel--right">
+      <section class="panel-block">
+        <h2 class="panel-title">Frame summary</h2>
+        <div class="summary-grid" id="summary-grid"><!-- injected --></div>
+      </section>
+
+      <section class="panel-block panel-block--fill">
+        <div class="alert-feed__header">
+          <h2 class="panel-title" style="border-bottom:none; padding-bottom:0; margin:0;">Alert feed</h2>
+          <div class="lang-toggle" role="tablist">
+            <button class="lang-btn is-active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="hi">HI</button>
+          </div>
+        </div>
+        <div class="alert-feed" id="alert-feed"><!-- injected --></div>
+      </section>
+    </aside>
+
+  </main>
+
+  <footer class="footer">
+    <span>SIH26071 · Ministry of Earth Sciences · Disaster Management</span>
+    <span id="footer-note">Prototype build — synthetic multi-source demo dataset</span>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
