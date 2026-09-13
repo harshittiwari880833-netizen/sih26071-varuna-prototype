@@ -1,0 +1,330 @@
+{
+  "meta": {
+    "city_name": "Your City (Sample)",
+    "center_lat": 19.076,
+    "center_lon": 72.877,
+    "grid_size": 3,
+    "grid_spacing_deg": 0.02,
+    "time_steps": 2,
+    "time_step_minutes": 30,
+    "grid_cells": [
+      {
+        "cell_id": "0_0",
+        "row": 0,
+        "col": 0,
+        "lat": 19.0,
+        "lon": 72.8
+      },
+      {
+        "cell_id": "0_1",
+        "row": 0,
+        "col": 1,
+        "lat": 19.0,
+        "lon": 72.82
+      },
+      {
+        "cell_id": "0_2",
+        "row": 0,
+        "col": 2,
+        "lat": 19.0,
+        "lon": 72.84
+      },
+      {
+        "cell_id": "1_0",
+        "row": 1,
+        "col": 0,
+        "lat": 19.02,
+        "lon": 72.8
+      },
+      {
+        "cell_id": "1_1",
+        "row": 1,
+        "col": 1,
+        "lat": 19.02,
+        "lon": 72.82
+      },
+      {
+        "cell_id": "1_2",
+        "row": 1,
+        "col": 2,
+        "lat": 19.02,
+        "lon": 72.84
+      },
+      {
+        "cell_id": "2_0",
+        "row": 2,
+        "col": 0,
+        "lat": 19.04,
+        "lon": 72.8
+      },
+      {
+        "cell_id": "2_1",
+        "row": 2,
+        "col": 1,
+        "lat": 19.04,
+        "lon": 72.82
+      },
+      {
+        "cell_id": "2_2",
+        "row": 2,
+        "col": 2,
+        "lat": 19.04,
+        "lon": 72.84
+      }
+    ]
+  },
+  "model_metrics": {
+    "rmse_mm_hr": 3.1,
+    "pod_probability_of_detection": 0.95,
+    "far_false_alarm_ratio": 0.07,
+    "csi_critical_success_index": 0.89,
+    "heavy_rain_threshold_mm_hr": 30,
+    "feature_importance": {
+      "radar_reflectivity_dbz": 0.82,
+      "sat_cloud_top_temp_k": 0.14,
+      "aws_rain_fused": 0.03,
+      "nwp_forecast_mm_hr": 0.01
+    }
+  },
+  "frames": [
+    {
+      "time_step": 0,
+      "minutes_from_start": 0,
+      "cells": [
+        {
+          "id": "0_0",
+          "row": 0,
+          "col": 0,
+          "lat": 19.0,
+          "lon": 72.8,
+          "rain_mm_hr": 10,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 0.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "0_1",
+          "row": 0,
+          "col": 1,
+          "lat": 19.0,
+          "lon": 72.82,
+          "rain_mm_hr": 10,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 0.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "0_2",
+          "row": 0,
+          "col": 2,
+          "lat": 19.0,
+          "lon": 72.84,
+          "rain_mm_hr": 10,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 0.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "1_0",
+          "row": 1,
+          "col": 0,
+          "lat": 19.02,
+          "lon": 72.8,
+          "rain_mm_hr": 15,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 1.5,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "1_1",
+          "row": 1,
+          "col": 1,
+          "lat": 19.02,
+          "lon": 72.82,
+          "rain_mm_hr": 15,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 1.5,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "1_2",
+          "row": 1,
+          "col": 2,
+          "lat": 19.02,
+          "lon": 72.84,
+          "rain_mm_hr": 15,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 1.5,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "2_0",
+          "row": 2,
+          "col": 0,
+          "lat": 19.04,
+          "lon": 72.8,
+          "rain_mm_hr": 20,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 3.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "2_1",
+          "row": 2,
+          "col": 1,
+          "lat": 19.04,
+          "lon": 72.82,
+          "rain_mm_hr": 20,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 3.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "2_2",
+          "row": 2,
+          "col": 2,
+          "lat": 19.04,
+          "lon": 72.84,
+          "rain_mm_hr": 20,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 3.0,
+          "flood_severity": "safe"
+        }
+      ],
+      "summary": {
+        "max_rain_mm_hr": 20,
+        "avg_confidence_pct": 80.0,
+        "cells_safe": 3,
+        "cells_low": 3,
+        "cells_moderate": 2,
+        "cells_high": 1,
+        "cells_severe": 0
+      }
+    },
+    {
+      "time_step": 1,
+      "minutes_from_start": 30,
+      "cells": [
+        {
+          "id": "0_0",
+          "row": 0,
+          "col": 0,
+          "lat": 19.0,
+          "lon": 72.8,
+          "rain_mm_hr": 25,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 4.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "0_1",
+          "row": 0,
+          "col": 1,
+          "lat": 19.0,
+          "lon": 72.82,
+          "rain_mm_hr": 25,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 4.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "0_2",
+          "row": 0,
+          "col": 2,
+          "lat": 19.0,
+          "lon": 72.84,
+          "rain_mm_hr": 25,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 4.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "1_0",
+          "row": 1,
+          "col": 0,
+          "lat": 19.02,
+          "lon": 72.8,
+          "rain_mm_hr": 30,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 5.5,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "1_1",
+          "row": 1,
+          "col": 1,
+          "lat": 19.02,
+          "lon": 72.82,
+          "rain_mm_hr": 30,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 5.5,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "1_2",
+          "row": 1,
+          "col": 2,
+          "lat": 19.02,
+          "lon": 72.84,
+          "rain_mm_hr": 30,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 5.5,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "2_0",
+          "row": 2,
+          "col": 0,
+          "lat": 19.04,
+          "lon": 72.8,
+          "rain_mm_hr": 35,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 7.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "2_1",
+          "row": 2,
+          "col": 1,
+          "lat": 19.04,
+          "lon": 72.82,
+          "rain_mm_hr": 35,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 7.0,
+          "flood_severity": "safe"
+        },
+        {
+          "id": "2_2",
+          "row": 2,
+          "col": 2,
+          "lat": 19.04,
+          "lon": 72.84,
+          "rain_mm_hr": 35,
+          "confidence_pct": 80.0,
+          "flood_depth_cm": 7.0,
+          "flood_severity": "safe"
+        }
+      ],
+      "summary": {
+        "max_rain_mm_hr": 35,
+        "avg_confidence_pct": 80.0,
+        "cells_safe": 3,
+        "cells_low": 3,
+        "cells_moderate": 2,
+        "cells_high": 1,
+        "cells_severe": 0
+      }
+    }
+  ],
+  "alerts": [
+    {
+      "time_step": 1,
+      "minutes_from_start": 30,
+      "level": "WATCH",
+      "message": "WATCH: Heavy rainfall (35 mm/hr) causing moderate flooding risk near (19.040, 72.800). Estimated water depth: 9 cm.",
+      "affected_cells": 2,
+      "confidence_pct": 80.0
+    }
+  ],
+  "generated_by": "Sample template for uploading your own fused dataset \u2014 see README for schema notes."
+}
