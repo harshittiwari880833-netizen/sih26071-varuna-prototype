@@ -1,0 +1,148 @@
+{
+  "cities": [
+    {
+      "id": "chennai",
+      "name": "Chennai",
+      "center_lat": 13.0827,
+      "center_lon": 80.2707,
+      "localities": [
+        {
+          "name": "Anna Nagar",
+          "row": 16,
+          "col": 7,
+          "cell_id": "16_7",
+          "lat": 13.2027,
+          "lon": 80.2107
+        },
+        {
+          "name": "T. Nagar",
+          "row": 11,
+          "col": 8,
+          "cell_id": "11_8",
+          "lat": 13.1027,
+          "lon": 80.2307
+        },
+        {
+          "name": "Mylapore",
+          "row": 8,
+          "col": 14,
+          "cell_id": "8_14",
+          "lat": 13.0427,
+          "lon": 80.3507
+        },
+        {
+          "name": "Adyar",
+          "row": 6,
+          "col": 15,
+          "cell_id": "6_15",
+          "lat": 13.0027,
+          "lon": 80.3707
+        },
+        {
+          "name": "Velachery",
+          "row": 3,
+          "col": 10,
+          "cell_id": "3_10",
+          "lat": 12.9427,
+          "lon": 80.2707
+        }
+      ]
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "center_lat": 19.076,
+      "center_lon": 72.8777,
+      "localities": [
+        {
+          "name": "Andheri Subway",
+          "row": 16,
+          "col": 4,
+          "cell_id": "16_4",
+          "lat": 19.196,
+          "lon": 72.7577
+        },
+        {
+          "name": "Sion",
+          "row": 10,
+          "col": 12,
+          "cell_id": "10_12",
+          "lat": 19.076,
+          "lon": 72.9177
+        },
+        {
+          "name": "Hindmata (Dadar)",
+          "row": 9,
+          "col": 9,
+          "cell_id": "9_9",
+          "lat": 19.056,
+          "lon": 72.8577
+        },
+        {
+          "name": "King's Circle",
+          "row": 8,
+          "col": 10,
+          "cell_id": "8_10",
+          "lat": 19.036,
+          "lon": 72.8777
+        },
+        {
+          "name": "Kurla",
+          "row": 8,
+          "col": 14,
+          "cell_id": "8_14",
+          "lat": 19.036,
+          "lon": 72.9577
+        }
+      ]
+    },
+    {
+      "id": "bengaluru",
+      "name": "Bengaluru",
+      "center_lat": 12.9716,
+      "center_lon": 77.5946,
+      "localities": [
+        {
+          "name": "Yemalur",
+          "row": 9,
+          "col": 16,
+          "cell_id": "9_16",
+          "lat": 12.9516,
+          "lon": 77.7146
+        },
+        {
+          "name": "Koramangala",
+          "row": 6,
+          "col": 12,
+          "cell_id": "6_12",
+          "lat": 12.8916,
+          "lon": 77.6346
+        },
+        {
+          "name": "Silk Board Jn.",
+          "row": 5,
+          "col": 11,
+          "cell_id": "5_11",
+          "lat": 12.8716,
+          "lon": 77.6146
+        },
+        {
+          "name": "HSR Layout",
+          "row": 4,
+          "col": 13,
+          "cell_id": "4_13",
+          "lat": 12.8516,
+          "lon": 77.6546
+        },
+        {
+          "name": "Bellandur",
+          "row": 3,
+          "col": 15,
+          "cell_id": "3_15",
+          "lat": 12.8316,
+          "lon": 77.6946
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "rmse_mm_hr": 2.848,
+  "pod_probability_of_detection": 0.982,
+  "far_false_alarm_ratio": 0.046,
+  "csi_critical_success_index": 0.937,
+  "heavy_rain_threshold_mm_hr": 30,
+  "feature_importance": {
+    "sat_cloud_top_temp_k": 0.1289,
+    "radar_reflectivity_dbz": 0.8603,
+    "aws_rain_fused": 0.0058,
+    "nwp_forecast_mm_hr": 0.002,
+    "row": 0.0011,
+    "col": 0.0011,
+    "time_step": 0.0008
+  }
+}
